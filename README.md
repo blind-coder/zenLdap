@@ -3,6 +3,12 @@ zenLdap Introduction
 This is a Zenphoto-plugin that allows an LDAP-authentication against Microsoft Active Directory and OpenLDAP.
 The login-function checks first if there is a local-db user available (for the given credentials), if not, it will try to authenticate against the given LDAP-directory
 
+IMPORTANT NOTICE
+================
+
+If you installed this plugin before Dezember 7th 2020 you SHOULD IMMEDIATELY UPDATE!
+There exists an error in the code of `alt/lib-auth.php` which allows users to log in with an empty password!
+
 Setup
 =====
 Install the php-ldap extension, if you have apt:
