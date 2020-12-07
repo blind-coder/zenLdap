@@ -659,6 +659,10 @@ class Zenphoto_Authority {
 		if (isset($_POST['login'])) {
 			$post_user = sanitize(@$_POST['user']);
 			$post_pass = sanitize(@$_POST['pass'], 0);
+			if (strlen($post_pass) <= 0){
+				// force users to enter a password
+				return false;
+			}
 			$_zp_loggedin = false;
 
 			switch (@$_POST['password']) {
